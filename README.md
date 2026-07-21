@@ -66,11 +66,18 @@ pip install -r requirements.txt
 ```
 
 ---
-
-## ▶️ Run the Project
+### Install dependencies
 
 ```bash
-python app.py
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Setup the environment variables
+
+```bash
+$ cp .env.example .env
 ```
 
 ---
