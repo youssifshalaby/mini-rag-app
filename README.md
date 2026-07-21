@@ -75,6 +75,15 @@ python app.py
 
 ---
 
+
+## ▶️ (Optional) Setup you command line interface for better readability
+
+```bash
+export PS1="\[\033[01;32m\]\u@\h:\w\n\[\033[00m\]\$ "
+```
+
+---
+
 ## 🎯 Learning Objectives
 
 This project is built to understand the complete RAG pipeline, including:
