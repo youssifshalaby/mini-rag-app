@@ -1,0 +1,13 @@
+from pydantic import ConfigDict
+from pydantic_settings import BaseSettings
+
+class Settings(BaseSettings):
+    APP_NAME: str
+    APP_VERSION: str
+    FILE_ALLOWED_TYPES: list[str]
+    FILE_MAX_SIZE: int
+
+    model_config = ConfigDict(env_file=".env")
+    
+def get_settings():
+    return Settings()
