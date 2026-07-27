@@ -28,11 +28,12 @@ class DataController(BaseController):
         random_key = self.generate_random_string()
         project_path = ProjectController().get_project_path(project_id = project_id)
         cleaned_file_name = self.get_clean_file_name(original_file_name=original_file_name)
-        new_file_path = os.path.join(project_path,random_key + "_" + cleaned_file_name)
+        new_file_name = random_key + "_" + cleaned_file_name
+        new_file_path = os.path.join(project_path,new_file_name)
         while os.path.exists(new_file_path):
             random_key = self.generate_random_string()
             new_file_path = os.path.join(project_path,random_key + "_" + cleaned_file_name)
-        return new_file_path
+        return new_file_path,new_file_name
 
     def get_clean_file_name(self,original_file_name:str):
         cleaned_file_name = re.sub(r"[^\w.]","",original_file_name.strip())
