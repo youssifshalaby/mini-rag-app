@@ -109,3 +109,6 @@ cython_debug/
 #pycache
 __pycache__/
 *.pyc
+
+#vscode
+.vscode/
